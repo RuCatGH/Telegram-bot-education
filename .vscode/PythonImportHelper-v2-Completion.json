@@ -1,0 +1,150 @@
+[
+    {
+        "label": "types",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "types",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "executor",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "dp",
+        "importPath": "bot",
+        "description": "bot",
+        "isExtraImport": true,
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "dp",
+        "importPath": "bot",
+        "description": "bot",
+        "isExtraImport": true,
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "dp",
+        "importPath": "bot",
+        "description": "bot",
+        "isExtraImport": true,
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "MemoryStorage",
+        "importPath": "aiogram.contrib.fsm_storage.memory",
+        "description": "aiogram.contrib.fsm_storage.memory",
+        "isExtraImport": true,
+        "detail": "aiogram.contrib.fsm_storage.memory",
+        "documentation": {}
+    },
+    {
+        "label": "FSMContext",
+        "importPath": "aiogram.dispatcher",
+        "description": "aiogram.dispatcher",
+        "isExtraImport": true,
+        "detail": "aiogram.dispatcher",
+        "documentation": {}
+    },
+    {
+        "label": "State",
+        "importPath": "aiogram.dispatcher.filters.state",
+        "description": "aiogram.dispatcher.filters.state",
+        "isExtraImport": true,
+        "detail": "aiogram.dispatcher.filters.state",
+        "documentation": {}
+    },
+    {
+        "label": "StatesGroup",
+        "importPath": "aiogram.dispatcher.filters.state",
+        "description": "aiogram.dispatcher.filters.state",
+        "isExtraImport": true,
+        "detail": "aiogram.dispatcher.filters.state",
+        "documentation": {}
+    },
+    {
+        "label": "start_message",
+        "importPath": "bot.utils.text",
+        "description": "bot.utils.text",
+        "isExtraImport": true,
+        "detail": "bot.utils.text",
+        "documentation": {}
+    },
+    {
+        "label": "create_message_keyboard",
+        "importPath": "bot.keyboards.main_keyboard",
+        "description": "bot.keyboards.main_keyboard",
+        "isExtraImport": true,
+        "detail": "bot.keyboards.main_keyboard",
+        "documentation": {}
+    },
+    {
+        "label": "InlineKeyboardMarkup",
+        "importPath": "aiogram.types",
+        "description": "aiogram.types",
+        "isExtraImport": true,
+        "detail": "aiogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "InlineKeyboardButton",
+        "importPath": "aiogram.types",
+        "description": "aiogram.types",
+        "isExtraImport": true,
+        "detail": "aiogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "RegistrationStates",
+        "kind": 6,
+        "importPath": "bot.handlers.message_handler",
+        "description": "bot.handlers.message_handler",
+        "peekOfCode": "class RegistrationStates(StatesGroup):\n    category = State()\n@dp.callback_query_handler(state=RegistrationStates.category)\ndef get_advice():\n    pass",
+        "detail": "bot.handlers.message_handler",
+        "documentation": {}
+    },
+    {
+        "label": "get_advice",
+        "kind": 2,
+        "importPath": "bot.handlers.message_handler",
+        "description": "bot.handlers.message_handler",
+        "peekOfCode": "def get_advice():\n    pass",
+        "detail": "bot.handlers.message_handler",
+        "documentation": {}
+    },
+    {
+        "label": "create_message_keyboard",
+        "kind": 2,
+        "importPath": "bot.keyboards.main_keyboard",
+        "description": "bot.keyboards.main_keyboard",
+        "peekOfCode": "def create_message_keyboard():\n    keyboard = InlineKeyboardMarkup(resize_keyboard=True, row_width=2)\n    # Создание кнопок\n    for i in range(0, len(keyboards_text), 2):\n        button1 = InlineKeyboardButton(keyboards_text[i], callback_data=f'{keyboards_text[i]}')\n        if i + 1 < len(keyboards_text):\n            button2 = InlineKeyboardButton(keyboards_text[i + 1], callback_data=f'{keyboards_text[i + 1]}')\n            keyboard.row(button1, button2)\n        else:\n            keyboard.add(button1)",
+        "detail": "bot.keyboards.main_keyboard",
+        "documentation": {}
+    }
+]
