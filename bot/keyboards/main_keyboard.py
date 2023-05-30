@@ -1,6 +1,6 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-keyboards_text = ['Саморазвитие', 'Программирование', 'Космос', 'Нейросети', 'Книги к прочтению', 'Спорт', 'Здоровье']
+keyboards_text = ['Саморазвитие', 'Программирование', 'Космос', 'Психология', 'Спорт', 'Здоровье']
 
 
 def create_message_keyboard() -> InlineKeyboardMarkup:

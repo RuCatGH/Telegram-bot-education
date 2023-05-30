@@ -11,11 +11,28 @@ class RegistrationStates(StatesGroup):
 
 
 # Для отзывов
-@dp.message_handler(commands=['feedback'])
+@dp.message_handler(commands=['feedback'], state='*')
 async def send_message_to_group(message: types.Message):
     chat_id = -1001815446276  # Замените на ID вашей группы
     await bot.send_message(chat_id=chat_id, text=message.text)
     await message.answer('📣 Мы всегда открыты к вашим пожеланиям! Спасибо огромное за ваш отзыв! 🙌🌟')
+
+
+@dp.message_handler(commands=['custom'], state='*')
+async def send_message_to_group(message: types.Message):
+    category = message.text.split(' ')[-1]
+    message2 = f"🔔 Вы выбрали категорию: {category}!\n\n" \
+              f"Спасибо за выбор! Теперь каждый день вам будет " \
+              f"отправляться совет по этой категории. Оставайтесь на " \
+              f"связи и получайте полезные рекомендации! 💡💪"
+    if check_or_update_category(user_id=message.from_user.id, category_user=category):
+        await message.answer(message2)
+    else:
+        await message.answer(message2)
+        await message.answer('👋 Вот и первый совет! 😉')
+
+        advice = get_advice_chatgpt(category)
+        await message.answer(advice)
 
 
 # Отправка совета
@@ -23,7 +40,6 @@ async def send_advice():
     users = get_all_id_and_categories()
     for user in users:
         id, category = user
-
         advice = get_advice_chatgpt(category)
         await bot.send_message(id, advice)
 
